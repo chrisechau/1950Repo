@@ -3,6 +3,23 @@
 <head>
 	<title>Github Test</title>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#hide-me").click(function() {
+				$(".box").hide(300);
+			})
+			$("#show-me").click(function() {
+				$(".box").show(300);
+				
+			})
+			$("#toggle-me").click(function() {
+				$(".box").toggle(300);
+			})
+			$("#colour-me").click(function() {
+				$(".box").css({"background":"blue"});
+			})
+		});
+	</script>
 	<style>
 		body {
 			font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
@@ -18,9 +35,10 @@
 <body>
 	<h1>Github Test by Esther</h1>
 	<ul>
-		<li>Hide</li>
-		<li>Show</li>
-		<li>Toggle</li>
+		<li id="hide-me"><a href="#">Hide</a></li>
+		<li id="show-me"><a href="#">Show</a></li>
+		<li id="toggle-me"><a href="#">Toggle</a></li>
+		<li id="colour-me"><a href="#">Colour</a></li>
 	</ul>
 	<div class="box"></div>
 </body>
